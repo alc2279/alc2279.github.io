@@ -2,7 +2,7 @@
 title: "Annie Clark"
 ---
 
-#### Biostatistics Masters Student
+#### Biostatistics Master's Student
 #### Columbia Mailman School of Publich Health
 
 <img src = "images/annie.png" style = "width:40%">
