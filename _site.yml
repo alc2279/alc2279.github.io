@@ -14,4 +14,4 @@ navbar:
       href: https://www.linkedin.com/in/annieclark/
 output:
   html_document:
-    theme: simplex
+    theme: flatly
