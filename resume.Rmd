@@ -1,0 +1,78 @@
+---
+title: "Resume"
+---
+
+### Education
+
+##### Duke University , Durham, NC
+Bachelor of Arts: Statistics; Certificate: Markets and Management 
+Graduated May 2009
+
+* Dean’s List with Highest Distinction: Fall 2008; Dean’s List: Spring 2008, Fall 2009
+* Duke University Varsity Swim Team Member
+
+##### Stanford Center for Professional Development, Palo Alto, CA
+
+* Introduction to Computer Programming (Winter 2017)
+* Data Mining and Analytics (Autumn 2017)
+* Introduction to Applied Statistics (Winter 2018)
+  
+
+### Work Experience
+
+##### Google, Mountain View, CA/Sunnyvale, CA October 2013
+Program Manager, Hardware Operations November 2016 - August 2018
+
+* Developed and deployed a Total Cost of Ownership statistical model for data center operations
+  + Designed costing models and led implementation of backend data infrastructure
+* Led optimization of the deployment of fiber cables in data centers
+
+Program Manager, Google Express
+January 2016 - November 2016
+
+* Managed expansion efforts that increased U.S. product coverage from 25% to 100% in 9 months
+  + Managed eight successful expansion product launches and five successful beta launches
+* Developed operations requirements for the integration of a project management tool and prioritized
+operations feature requests with engineering
+
+Policy Strategist, Adwords 
+October 2013 - January 2016
+
+* Led Adwords policy data analytics, provided organizational leadership with a data�driven framework to make decisions
+* Designed and deployed critical internal tool changes for a major global policy redesign in AdWords
+* Developed new AdWords policies partnering with cross functional stakeholders
+
+##### PricewaterhouseCoopers, New York, NY August 2009 - October 2013
+Forensics Technology Senior Associate, Advisory Services
+
+* Performed complex analyses on large health insurance data to provide corporate clients and their legal
+representatives' time sensitive solutions to business disputes, regulatory issues and investigative litigation
+matters.
+  +  Utilized SQL and PL/SQL in the Oracle database environment to perform complex analyses on
+large relational datasets to understand relationships between member and provider insurance
+claims data
+  + Learned the intricacies of the health insurance data system
+  + Supervised junior staff members by monitoring their work streams, delegating tasks, offering
+technical support
+
+*  Project managed Information Records Management during M&A activities
+* Completed a six month Tour of Duty as the HR Demand Manager for the Forensics Technology Solutions
+Team nationally
+  + Responsible for the deployment/resource management for 110 employees, capacity and headcount
+planning, employee schedules/utilization monitoring and forecasting
+
+##### Duke University , Durham, NC
+Research Assistant, Office of Assessment March 2007 - May 2009
+
+* Conducted institutional research and analysis of Duke’s undergraduate curriculum.
+* Developed programs in SAS for data analysis; investigated trends in data through inferential statistics
+* Designed university wide online surveys and developed final reports for University administration.
+Teaching Assistant, Duke Statistics Department June 2008  December 2008
+* TA for Undergraduate Statistics Courses
+Resident Assistant, Duke Residence and Housing Services September 2007  May 2009
+
+##### Certifications and Skills
+
+Programing Languages: R, SAS, Matlab, Java
+Database Languages: SQL, PL/SQL, SQL Server and Microsoft Access
+Certification: Oracle Database Administrator Certified Associate

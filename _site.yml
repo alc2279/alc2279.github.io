@@ -1,14 +1,17 @@
-name: "Yay internet!"
+name: "Annie Clark!"
 output_dir: "."
 navbar:
   title: "Home"
+  left: 
+    - text: "Resume"
+      href: resume.html
   right:
-    - text: "About"
-      href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<alc2279@cumc.columbia.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: http://github.com/alc2279/
+    - icon: fa-linkedin
+      href: https://www.linkedin.com/in/annieclark/
 output:
   html_document:
     theme: simplex
