@@ -1,10 +1,8 @@
 ---
-title: "Holy cow!"
+title: "Annie Clark"
 ---
 
-### I have a webpage!
-
-And I can put all kinds of stuff on it!
+### Biostatistics Masters Student, Columbia Mailman School of Publich Health
 
 
 ### Add some links
