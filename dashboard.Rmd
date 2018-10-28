@@ -13,13 +13,9 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+
+
 ```{r}
-library(tidyverse)
-
-library(p8105.datasets)
-
-  
-
 ##data tidying used in hw 3
 nyweather_data = 
   ny_noaa %>%
@@ -40,127 +36,8 @@ nyweather_data =
   separate(date2, into = c("year", "month", "day"), sep = "-") %>% 
   mutate(month_name = month.name[as.numeric(month)]) %>% 
   mutate(year = as.integer(year)) %>% 
-  filter(as.integer(year) == 1999) %>% 
+  ##filter(as.integer(year) > 1999) %>% 
   select(name, id, everything())
-
-
-nyweather_data %>% 
-  group_by(month_name, name) %>% 
-  summarise(average_tmax = mean(tmax)) %>% 
-  plot_ly(y = ~average_tmax, type = "scatter", mode = "lines", 
-          color = ~name)
-
-class(nyweather_data$month)
-
-
-
-nyweather_data = 
-ny_noaa %>% 
-  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
-##filter(year == "2010") %>%
-mutate(month_year = paste(year, month, sep = "")) %>% 
-group_by(name, month_year) %>% 
-summarise(avg_month_tmax = round(mean(tmax)),
-          avg_month_tmin = round(mean(tmin)), 
-          total_snowfall = sum(snow), 
-          total_prcp = sum(prcp))
-
-
-##mutate(month = str_sub(month_year, 5, 6))
-
-
-nyweather_data %>% 
-  group)
-plot_ly(y = ~avg_month_tmax, type = "scatter", mode = "lines",
-          alpha = 0.5, 
-          color = ~name)
-
-
-
-ggplot(nyweather_data, aes(x = avg_month_tmin, y = avg_month_tmax)) + 
-  geom_point(aes(color = name), alpha = .5) + 
-  labs(
-    title = "Temperature plot",
-    x = "Minimum daily temperature (C)",
-    y = "Maxiumum daily temperature (C)",
-    caption = "Data from the rnoaa package"
-  ) + 
-  viridis::scale_color_viridis(
-    name = "Location", 
-    discrete = TRUE
-  ) + 
-  theme(legend.position = "bottom")
-
-
-ggplot(nyweather_data, aes(x = month, y = tmax)) + 
-  geom_point(alpha = .5) +
-  theme(legend.position = "bottom")
-
-install.packages("plotly")
-library(plotly)
-
-
-
-nyweather_data %>% 
-filter(year == "2010") %>%
-group_by(name, month) %>% 
-summarise(avg_month_tmax = mean(tmax)) %>% 
-plot_ly(y = ~avg_month_tmax, type = "scatter", mode = "lines",
-          alpha = 0.5, 
-          color = ~name)
-
-##nyweather_data = 
-nyweather_data %>% 
-##filter(year == "2010") %>%
-mutate(month_year = paste(year, month, sep = "")) %>% 
-group_by(name, month_year) %>% 
-summarise(avg_month_tmax = mean(tmax), 
-          total_snowfall = sum(snow), 
-          total_prcp = sum(prcp)) %>% 
-plot_ly(y = ~avg_month_tmax, type = "scatter", mode = "lines",
-          alpha = 0.5, 
-          color = ~name)
-
-ggplot(nyweather_data, aes(x = date, y = tmax)) + 
-  geom_line(aes(color = name)) + 
-  labs(
-    title = "Temperature plot",
-    x = "Minimum daily temperature (C)",
-    y = "Maxiumum daily temperature (C)",
-    caption = "Data from the rnoaa package"
-  ) + 
-  viridis::scale_color_viridis(
-    name = "Location", 
-    discrete = TRUE
-  ) + 
-  theme(legend.position = "bottom")
-
-
-nyweather_data %>% 
-  filter(prcp != 0,
-         prcp < 50) %>% 
-  group_by(prcp) %>% 
-  summarise(n = n()) %>% 
-  plot_ly(x = ~prcp, y = ~n, color = ~prcp, type = "bar")
-
-
-```
-
-
-
-
-
-```{r}
-set.seed(1)
-data(nyc_airbnb)
-nyc_airbnb = 
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>%
-  select(boro = neighbourhood_group, neighbourhood, rating, price, room_type, latitude, longitude) %>%
-  filter(!is.na(rating), 
-         boro == "Brooklyn",
-         room_type == "Entire home/apt",
-         price %in% 100:500)  
 ```
 
 
@@ -171,12 +48,12 @@ Column {data-width=500}
 ### Chart A
 
 ```{r}
-nyc_airbnb %>%
-  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
-  plot_ly(x = ~longitude, y = ~latitude, type = "scatter", mode = "markers",
+nyweather_data %>% 
+group_by(name, year) %>% 
+summarise(avg_annual_tmax = mean(tmax)) %>% 
+plot_ly(x = ~year, y = ~avg_annual_tmax, type = "scatter", mode = "lines",
           alpha = 0.5, 
-          color = ~price,
-          text = ~text_label)
+          color = ~name)
 ```
 
 Column {data-width=500}
@@ -185,54 +62,18 @@ Column {data-width=500}
 ### Chart B
 
 ```{r}
-common_neighborhoods =
-  nyc_airbnb %>% 
-  count(neighbourhood, sort = TRUE) %>% 
-  top_n(8) %>% 
-  select(neighbourhood)
-inner_join(nyc_airbnb, common_neighborhoods,
-             by = "neighbourhood") %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
-  plot_ly(y = ~price, color = ~neighbourhood, type = "box",
+plot_ly(nyweather_data, y = ~tmax, color = ~month, type = "box",
           colors = "Set2")
 ```
 
 ### Chart C
 
 ```{r}
-nyc_airbnb %>% 
-  count(neighbourhood) %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
-  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar")
-
-
-
-
-```
-
-
-
-```{r}
-plot_ly(nyweather_data, y = ~tmax, color = ~month, type = "box",
-          colors = "Set2")
-```
-
-
-```{r}
-plot_ly(nyweather_data, y = ~tmax, color = ~month, type = "box",
-          colors = "Set2")
-```
-
-
-
-```{r}
-set.seed(1)
-
 nyweather_data %>% 
-  ##filter(year == "2010") %>% 
-  plot_ly(y = ~tmax, type = "scatter", mode = "lines",
-          alpha = 0.5, 
-          color = ~name)
+  mutate(year_month = paste(year, month, sep = "")) %>% 
+  group_by(year, year_month) %>% 
+  summarise(total_rainfall = sum(prcp, na.rm = TRUE)) %>% 
+  plot_ly(x = ~year_month, y = ~total_rainfall, type = "bar")
 ```
 
 
@@ -260,33 +101,33 @@ nyweather_data =
   separate(date2, into = c("year", "month", "day"), sep = "-") %>% 
   mutate(month_name = month.name[as.numeric(month)]) %>% 
   mutate(year = as.integer(year)) %>% 
-  filter(as.integer(year) > 1999) %>% 
+  ##filter(as.integer(year) > 1999) %>% 
   select(name, id, everything())
+
+
+
+
+## GOOD PLOT - AVG ANNUAL TEMP OVER YEARS BY CITY
+nyweather_data %>% 
+group_by(name, year) %>% 
+summarise(avg_annual_tmax = mean(tmax)) %>% 
+plot_ly(x = ~year, y = ~avg_annual_tmax, type = "scatter", mode = "lines",
+          alpha = 0.5, 
+          color = ~name)
+
+
 
 ##good graph - boxplot of tmax temperature by month
 plot_ly(nyweather_data, y = ~tmax, color = ~month, type = "box",
           colors = "Set2")
 
-##scatterplot of temperatures by city
-nyweather_data %>% 
-  group_by(month_name, name) %>% 
-  summarise(average_tmax = mean(tmax)) %>% 
-  plot_ly(y = ~average_tmax, type = "scatter", mode = "lines", 
-          color = ~name)
-
 ##histogram of rain 
-nyweather_data %>% 
-  group_by(name) %>% 
-  summarise(total_rainfall = sum(prcp, na.rm = TRUE)) %>% 
-  mutate(name = as.factor(name),
-         name = fct_reorder(name, total_rain)) %>% 
-  plot_ly(x = ~name, y = ~total_rain, color = ~name, type = "bar")
-  
 nyweather_data %>% 
   mutate(year_month = paste(year, month, sep = "")) %>% 
   group_by(year, year_month) %>% 
   summarise(total_rainfall = sum(prcp, na.rm = TRUE)) %>% 
   plot_ly(x = ~year_month, y = ~total_rainfall, type = "bar")
+
 
 ```
 
