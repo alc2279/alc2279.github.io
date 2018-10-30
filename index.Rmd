@@ -13,7 +13,7 @@ I’m a first year Biostatistics Master's Student at Columbia University Mailman
 Additional information on my education and experience can be found on my [resume](resume.html). <br> 
 
 ### Data Science Homework
-For problem 2 on homework 4 can be found [here](example.html). <br> 
+Problem 2 on homework 4 can be found [here](example.html). <br> 
 
 ### Contact Information
 
