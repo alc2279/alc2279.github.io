@@ -16,8 +16,7 @@ library(plotly)
 ```
 
 ```{r}
-## Top Largest Cities in NY are: Albany, Buffalo, NYC, Rochester and Syracuse
- 
+## top largest cities in NY are: Albany, Buffalo, NYC, Rochester and Syracuse
 nyweather_data = 
   ny_noaa %>%
   filter(str_detect(id, c("USW00014733|USW00014735|USW00014768|USW00014771|USW00094789"))) %>%
@@ -33,9 +32,7 @@ nyweather_data =
          tmin = tmin / 10,
          tmax = tmax / 10) %>% 
   separate(date, into = c("year", "month", "day"), sep = "-") %>% 
-  mutate(month_name = month.name[as.numeric(month)],
-         year = as.integer(year)) %>% 
-  ##filter((year) > 1999) %>% 
+  mutate(month_name = month.name[as.numeric(month)]) %>% 
   select(name, id, year, month, month_name, day, tmin, tmax, prcp)
 ```
 
