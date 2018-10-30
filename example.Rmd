@@ -2,6 +2,7 @@
 title: "Weather Drilldown in the Largest 5 New York Cities (2000 - 2010)"
 output: 
   flexdashboard::flex_dashboard:
+    self_contained: false
     orientation: columns
     vertical_layout: fill
 ---
@@ -34,7 +35,7 @@ nyweather_data =
   separate(date, into = c("year", "month", "day"), sep = "-") %>% 
   mutate(month_name = month.name[as.numeric(month)],
          year = as.integer(year)) %>% 
-  filter((year) > 1999) %>% 
+  ##filter((year) > 1999) %>% 
   select(name, id, year, month, month_name, day, tmin, tmax, prcp)
 ```
 
@@ -55,13 +56,13 @@ nyweather_data %>%
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Maximum Monthly Temperature by City Over Time
+### Average Maximum Annual Temperature by City Over Time
 
 ```{r}
 nyweather_data %>%
   group_by(name, year) %>% 
-  summarise(mean_annual_max_temperature = mean(tmax)) %>% 
-  plot_ly(x = ~year, y = ~mean_annual_max_temperature, type = "scatter", mode = "lines",
+  summarise(mean_max_temp = mean(tmax)) %>% 
+  plot_ly(x = ~year, y = ~mean_max_temp, type = "scatter", mode = "lines",
           alpha = 0.5, 
           color = ~name)
 ```
