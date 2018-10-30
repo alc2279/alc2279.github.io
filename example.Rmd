@@ -56,7 +56,7 @@ nyweather_data %>%
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Average Maximum Annual Temperature by City Over Time
+### Average Maximum Temperature by Year and City Over Time
 
 ```{r}
 nyweather_data %>%
