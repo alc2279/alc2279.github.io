@@ -5,8 +5,8 @@ navbar:
   left: 
     - text: "Resume"
       href: resume.html
-    - text: "Example"
-      href: example.html
+    - text: "The Heart Project"
+      href: https://alc2279.github.io/p8105_final_project/
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<alc2279@cumc.columbia.edu>
