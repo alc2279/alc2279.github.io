@@ -4,12 +4,14 @@ navbar:
   title: "Home"
   left: 
     - text: "Resume"
-      href: resume.html
+      href: annieclark_resume_202005.pdf
     - text: "The Heart Project"
       href: https://alc2279.github.io/p8105_final_project/
+    - text: "HappyFit"
+      href: http://myhappyfit.weebly.com 
   right:
     - icon: fa-envelope fa-lg
-      href: mailto:<alc2279@cumc.columbia.edu>
+      href: mailto:<anne.louise.clark@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/alc2279/
     - icon: fa-linkedin
