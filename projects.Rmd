@@ -9,7 +9,7 @@ The Heart Project was the final project for the course, [Data Science I](https:/
 
 ### [HappyFit](http://myhappyfit.weebly.com)
 HappyFit was a project that spanned two consecutive semesters for the Biomedical Engineering courses, Biomedical Innovation I (Fall 2019) and Biomedical Innovations II (Spring 2020). The goal of the course was to develop a novel medical device, from problem inception to plans on bringing the device to market. <br>
-My team developed with an convenient, accessible and affordable way to produce customized orthotics, specifically for diabetic neuropathy patients. The HappyFit orthotic increases foot comfort and prevents the development of foot ulcers and deformations. Our solution allows anyone to use a smartphone or tablet to collect the necessary information for our company to produce a 3D printed orthotic. 
+My team developed a convenient, accessible and affordable way to produce customized orthotics, specifically for diabetic neuropathy patients. The HappyFit orthotic increases foot comfort and prevents the development of foot ulcers and deformities. Our solution allows anyone to use a smartphone or tablet to collect the necessary information for our company to produce a 3D printed orthotic. 
 
 ### [Example Dashboard](example.html)
 This is an example of some of the coursework that I completed in [Data Science I](https://p8105.com/) (Fall 2018). This specific dashboard uses plotly graphs and flexdashboards in R to display the weather temperature and rainfall trends in the top 5 cities in New York. 
