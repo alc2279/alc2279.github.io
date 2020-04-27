@@ -9,6 +9,8 @@ navbar:
       href: https://alc2279.github.io/p8105_final_project/
     - text: "HappyFit"
       href: http://myhappyfit.weebly.com 
+    - text: "Projects"
+      href: projects.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<anne.louise.clark@gmail.com>

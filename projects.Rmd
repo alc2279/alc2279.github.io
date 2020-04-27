@@ -1,0 +1,13 @@
+---
+title: "Projects"
+---
+<br>
+<br>
+### [The Heart Project](https://alc2279.github.io/p8105_final_project/)
+Description of the Heart Project
+
+### [HappyFit](http://myhappyfit.weebly.com )
+Description of HappyFit
+
+### [Example dashboard](example.html)
+Description of Example
