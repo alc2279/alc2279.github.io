@@ -3,17 +3,19 @@ title: "Annie Clark"
 ---
 
 #### Biostatistics Master's Student
-#### Columbia Mailman School of Publich Health
+#### Columbia Mailman School of Public Health
 
 <img src = "images/annie.png" style = "width:40%">
 
-### About
+### Hello!
 
-<b>I am currently looking for a full-time position as a Data Scientist or Biostatistician in the San Francisco Bay Area. I would love to hear about any opportunities that are available! Please feel free to send me an email at [anne.louise.clark@gmail.com](mailto:anne.louise.clark@gmail.com)</b><br> 
+<b>I am currently looking for a full-time position as a Data Scientist or Biostatistician in San Francisco, CA. I would love to hear about any opportunities that are available! Please feel free to send me an email at [anne.louise.clark@gmail.com](mailto:anne.louise.clark@gmail.com)</b><br> 
+
+### About
 
 I am finishing my Biostatistics Master's degree at [Columbia University Mailman School of Public Health](https://www.mailman.columbia.edu/academics/departments/biostatistics) in May 2020. While as a student, I worked as a Research Assistant at Columbia with Professor [Melanie Wall](http://www.columbia.edu/~mmw2177/). In the summer of 2019, I was a Statistical Programmer Intern at [Acumen, LLC](https://www.acumenllc.com/) in the San Francisco Bay Area. I previously worked at [Google](https://www.google.com) from 2013 - 2018 as a Program Manager and at [PricewaterhouseCoopers](https://www.pwc.com/sg/en/services/consulting/forensics/forensic-technology-solutions.html) from 2009 - 2013 as a Forensic Technology Consultant. I completed my B.A. in Statistics at Duke University in 2009. 
 
-Additional information on my education and experience can be found on my [resume](resume.html). <br> 
+Additional information on my education and experience can be found on my [resume](annieclark_resume_202005.pdf). <br> 
 
 ### Contact Information
 
